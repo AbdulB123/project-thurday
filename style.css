@@ -1,0 +1,233 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.navbar{
+    background-color: rgb(25, 25, 95);
+    width: 100vw;
+    height: 80px;
+    padding-top: 20px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif    ;
+}
+.name{
+    width: 50vw;
+    /* border: 2px solid black; */
+    padding-left: 200px;
+}
+.sidenavbar>ul{
+    width: 50vw;
+    display: flex;
+    justify-content: space-evenly;
+
+
+}
+.sidenavbar>ul>li{
+    list-style: none;
+
+
+
+}
+.sidenavbar>ul>li>a{
+    text-decoration: none;
+    color: white;
+}
+.sidenavbar>ul>li:hover{
+    cursor: pointer;
+    background-color: rgb(139, 139, 221);
+    height: 100%;
+
+
+
+}
+.content{
+    width: 100vw;
+    background-color: rgb(50, 50, 112);
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    
+}
+.myself{
+    width: 50%;
+    color: rgb(211, 174, 127);
+
+}
+.myself>span{
+    color: rgb(236, 241, 247);
+
+}
+.animated-text {
+    font-size: 2rem;
+    font-weight: bold;
+    opacity: 0; /* Initially hidden */
+    transform: translateX(-100px); /* Start position */
+    animation: appearTranslate 1s ease-in-out forwards; /* Animation applied */
+  }
+  
+  @keyframes appearTranslate {
+    0% {
+      opacity: 0;
+      transform: translateX(-100px); /* Start off-screen to the left */
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0); /* Final position */
+    }
+  }
+  
+.mypicture>img{
+    width: 100%;
+    height: 400px;
+    border-radius: 60%;
+}
+
+.footer{
+    width: 100vw;
+    height: 5vh;
+    /* display: flex; */
+    /* flex-direction: row;
+    justify-content: center ; */
+    background-color: black;
+    color: blanchedalmond;
+    font-weight: bold;
+}
+.footer>ul{
+    display: flex;
+    justify-content: space-evenly;
+}
+.footer>ul>li{
+    list-style: none;
+    text-decoration: none;
+
+}
+.footer>ul>li>a{
+    text-decoration: none;
+    color: white;
+
+}
+
+.about-me{
+    background-color: rgb(50, 50, 112);
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    text-align: center;
+    width: 100vw;
+    height: 80vh;
+    padding-top: 200px;
+}
+.about-me {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInTranslate 2s ease-out forwards;
+    font-size: 1.2rem;
+    color: #f8e8e8;
+    line-height: 1.6;
+  }
+  
+  .about-me strong {
+    color: #007bff;
+  }
+  
+  @keyframes fadeInTranslate {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+@media (max-width: 768px) {
+    /* div {
+      background-color: lightgreen;
+    } */
+
+    .navbar{
+        flex-direction: column;
+        justify-content: center;
+        height: auto;
+    }
+    .sidenavbar>ul{
+        flex-direction: column;
+        padding-left: 200px;
+
+
+
+    }
+    .sidenavbar>ul>li:hover{
+        cursor: pointer;
+        background-color: rgb(139, 139, 221);
+
+
+
+    }
+    .content{
+        flex-direction: column;
+    }
+    .footer{
+        height: auto;
+    }
+    .footer>ul{
+        padding-top: 50px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+  }
+
+  @media (min-width: 480px) and (max-width: 767px) {
+    /* Styles for standard mobile devices */
+
+    .navbar{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+    }
+    .name{
+        /* background-color: brown; */
+        text-align: center;
+        padding-left: 0;
+    }
+    .sidenavbar>ul{
+        text-align:center;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 0px;
+        /* background-color: aqua; */
+
+
+
+    }
+    .sidenavbar>ul>li:hover{
+        cursor: pointer;
+        background-color: rgb(139, 139, 221);
+
+
+
+    }
+    .about-me{
+        padding-top: 100px;
+    }
+    .content{
+        flex-direction: column;
+        height: 100vh;
+    }
+    .footer{
+        height: auto;
+    }
+    .footer>ul{
+        padding-top: 20px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
